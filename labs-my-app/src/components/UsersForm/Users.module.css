@@ -1,7 +1,19 @@
+.container {
+    width: 1000px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -500px;
+    display: block;
+}
+
+
 textarea {
     margin: 10px;
     margin-left: -10px;
-    ;
+    
+        resize: none;
+    
 }
 
 button {
@@ -14,3 +26,73 @@ button {
     height: 40px;
     border-radius: 30px;
 }
+.item {
+    margin-left: 122px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+label {
+    margin: 10px;
+    font: bold 30px Arial;
+}
+tr {
+    margin: 20px;
+    
+    font: bold 30px Arial;
+
+}
+
+
+.form button {
+    margin-left: 40%;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    width: 10em;
+    height: 2.5em;
+    line-height: 2.5em;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #777;
+    color: #fff;
+    outline: none;
+    border: 2px solid #F64C2B;
+    border-radius: 5px;
+    box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, .1em .1em .2em #800;
+    background: linear-gradient(#FB9575, #F45A38 48%, #EA1502 52%, Cyan);
+}
+
+.form button:active {
+    top: .1em;
+    left: .1em;
+    box-shadow: 0 0 0 60px rgba(0, 0, 0, .05) inset;
+}
+
+.form {
+    background: rgb(184, 187, 190);
+    background-blend-mode: hard-light,
+        multiply,
+        normal;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 50px;
+}
+
+.item textarea {
+    width: 150px;
+    height: 50px;
+
+    border-radius: 10px;
+}
+.table {
+    margin-top: 20px;
+    background: rgb(184, 187, 190);
+    background-blend-mode: hard-light,
+        multiply,
+        normal;
+
+    border-bottom-right-radius: 10px;
+}
+
+

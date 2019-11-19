@@ -6,7 +6,11 @@ import s from "./FormAddUsers.module.css";
 
 class FormAddUsers extends Component {
   state = {
-    users: []
+    users: [{
+      firstname: 1,
+      lastname: 3,
+      email: 2
+    }]
   };
 
   deleteUser = index => {

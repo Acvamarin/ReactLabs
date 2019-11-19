@@ -1,7 +1,7 @@
 import { createStore, combineReducers  } from "redux";
-import usersReducers from "./usersReducers";
-let reducers  = combineReducers({
-   usersPage: usersReducers
+import usersReducer from "./users-reducer";
+let reducers = combineReducers({
+  usersPage: usersReducer
 });
 let store = createStore(reducers);
 export default store;

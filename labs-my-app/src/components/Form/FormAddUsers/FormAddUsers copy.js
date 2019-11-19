@@ -38,6 +38,6 @@ class FormAddUsersContainer extends Component {
     );
   }
 }
-let FormAddUsersContainer = connect()(FormAddUsers)
+let FormAddUsersContainer = connect()(FormAddUsers);
 
 export default FormAddUsersContainer;

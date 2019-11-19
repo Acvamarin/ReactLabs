@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import Login from "./components/Auth/login";
-import Form from "./components/Form/Form";
+// import Form from "./components/Form/Form";
+
 import Home from "./components/home";
 import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
 import { isAuthenticated } from "./respository";
+import UsersContainer from "./components/UsersForm/UsersContainer";
 
 class App extends Component {
   logOut() {
@@ -44,7 +46,7 @@ class App extends Component {
             </div>
           </nav>
           <Route exact path="/" component={Home} />
-          <Route exact path="/form" component={Form} />
+          <Route exact path="/form" component={UsersContainer} />
           <Route exact path="/login" component={Login} />
         </div>
       </Router>

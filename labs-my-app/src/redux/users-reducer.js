@@ -1,10 +1,8 @@
-const ADD_USER = "ADD-USER";
-const REMOVE_USER = "REMOVE-USER";
-const UPDATE_NEW_USER_TEXT = "UPDATE-NEW-USER-TEXT";
+import { ADD_USER, REMOVE_USER, UPDATE_NEW_USER_TEXT } from "./constants/ActionTypes";
 let initialState = {
   usersData: [
-    { id: 1, name: "Kirill",lastName: "Ivanov", email: "@dur" },
-    { id: 2, name: "Maksim",  lastName: "Ivanov", email: "@dur1" }
+    { id: 1, name: "Kirill", lastName: "Ivanov", email: "@dur" },
+    { id: 2, name: "Maksim", lastName: "Ivanov", email: "@dur1" }
   ],
   newText: "",
   newText1: "",
@@ -23,7 +21,7 @@ const usersReducer = (state = initialState, action) => {
         ...state,
         usersData: [
           ...state.usersData,
-          { id: state.usersData.length + 1, name: state.newText, lastName: state.newText1, email: state.newText2}
+          { id: state.usersData.length + 1, name: state.newText, lastName: state.newText1, email: state.newText2 }
         ]
       };
 
@@ -39,7 +37,6 @@ const usersReducer = (state = initialState, action) => {
       return state;
   }
 };
-
 export const AddUserActionCreator = () => ({ type: ADD_USER });
 export const RemoveUserActionCreator = id => ({ type: REMOVE_USER, id: id });
 export const updateNewUserTextActionCreator = (text, text1, text2) => ({
@@ -48,4 +45,6 @@ export const updateNewUserTextActionCreator = (text, text1, text2) => ({
   NewText1: text1,
   NewText2: text2
 });
-export default  usersReducer;
+
+
+export default usersReducer;

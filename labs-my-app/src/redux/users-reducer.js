@@ -23,7 +23,7 @@ const usersReducer = (state = initialState, action) => {
         ...state,
         usersData: [
           ...state.usersData,
-          { id: state.usersData.length + 1, name: state.newText, like: 0 , lastName: state.newText1, email: state.newText2}
+          { id: state.usersData.length + 1, name: state.newText, lastName: state.newText1, email: state.newText2}
         ]
       };
 

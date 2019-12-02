@@ -1,61 +1,59 @@
-import React, { Component } from "react";
+import React from "react";
 import { login } from "../../respository";
-import s from "./login.module.css";
+let Login = props => {
+  let nameElements = React.createRef();
+  let passElements = React.createRef();
 
-class Login extends Component {
-  constructor() {
-    super();
-    this.state = { name: "", password: "" };
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.submitLogin = this.submitLogin.bind(this);
-  }
+  let onTextChange = () => {
+    debugger;
+    let nameText = nameElements.current.value;
+    let passText = passElements.current.value;
+    props.updateNewLoginText(nameText, passText);
+  };  
 
-  handleInputChange(event) {
-    this.setState({ [event.target.name]: event.target.value });
-  }
-
-  submitLogin(event) {
+  let submitLogins = event => {
+    props.updateNewLoginText("", "");
     event.preventDefault();
-    login(this.state)
+    login(props.loginData)
       .then(token => (window.location = "/"))
       .catch(err => alert(err));
-  }
+  };
 
-  render() {
-    return (
-      <div className={s.container}>
-        <hr />
+  return (
+    <div>
+      <hr />
+      <div>
         <div>
           <div>
-            <div className={s.login}>
-              <h3>Log in </h3>
-            </div>
-            <div>
-              <form onSubmit={this.submitLogin}>
-                <div className={s.item}>
-                  <label>Name:</label>
-                  <input
-                    type="text"
-                    name="name"
-                    onChange={this.handleInputChange}
-                  />
-                </div>
-                <div className={s.item}>
-                  <label>Password:</label>
-                  <input
-                    type="password"
-                    name="password"
-                    onChange={this.handleInputChange}
-                  />
-                </div>
-                <button type="submit">Submit</button>
-              </form>
-            </div>
+            <h3>Log in </h3>
+          </div>
+          <div>
+            <form>
+              <div>
+                <label>Name:</label>
+                <input
+                  value={props.nameNewText}
+                  onChange={onTextChange}
+                  ref={nameElements}
+                />
+              </div>
+              <div>
+                <label>Password:</label>
+                <input
+                  value={props.passNewText1}
+                  onChange={onTextChange}
+                  ref={passElements}
+                />
+              </div>
+              <button type="submit" onClick={submitLogins}>
+                Submit
+              </button>
+            </form>
           </div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Login;

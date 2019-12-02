@@ -6,6 +6,7 @@ import Home from "./components/home";
 import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
 import { isAuthenticated } from "./respository";
 import UsersContainer from "./components/UsersForm/UsersContainer";
+import HomeContainer from "./components/homeContainer";
 
 class App extends Component {
   logOut() {
@@ -45,7 +46,7 @@ class App extends Component {
               </ul>
             </div>
           </nav>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={HomeContainer} />
           <Route exact path="/form" component={UsersContainer} />
           <Route exact path="/login" component={Login} />
         </div>

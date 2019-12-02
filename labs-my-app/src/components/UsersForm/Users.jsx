@@ -1,9 +1,27 @@
 import React from "react";
 import s from "./Users.module.css";
 const Users = props => {
+  let textElements = React.createRef();
+  let textElements1 = React.createRef();
+  let textElements2 = React.createRef();
+
+  let onTextChange = () => {
+    debugger;
+    let text = textElements.current.value;
+    let text1 = textElements1.current.value;
+    let text2 = textElements2.current.value;
+    props.updateNewUserText(text, text1, text2);
+  };
+
+  let onAddUser = e => {
+    e.preventDefault();
+    props.AddUser();
+  };
+
   let onRemoveUser = id => {
     props.RemoveUser(id);
   };
+
   let messagesElements = props.usersData.map((el, i) => {
     return (
       <tr key={i}>
@@ -18,25 +36,11 @@ const Users = props => {
       </tr>
     );
   });
-  let textElements = React.createRef();
-  let textElements1 = React.createRef();
-  let textElements2 = React.createRef();
-  let onAddUser = e => {
-    e.preventDefault();
-    props.AddUser();
-  };
 
-  let onTextChange = () => {
-    let text = textElements.current.value;
-    let text1 = textElements1.current.value;
-    let text2 = textElements2.current.value;
-
-    props.updateNewUserText(text, text1, text2);
-  };
   return (
     <div className={s.container}>
       <div>
-      <h1> Form add Users </h1>
+        <h1> Form add Users </h1>
       </div>
 
       <form>

@@ -1,9 +1,0 @@
-.table {
-    margin-top: 20px;
-    background: teal url(http://placekitten.com/250/200);
-    background-blend-mode: hard-light,
-    multiply,
-    normal;
-    
-    border-bottom-right-radius: 10px;
-    }

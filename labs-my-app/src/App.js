@@ -16,10 +16,10 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <nav className="navbar navbar-default">
-            <div className="container-fluid container">
-              <div className="navbar-header"></div>
-              <ul className="nav navbar-nav">
+          <nav>
+            <div>
+              <div></div>
+              <ul>
                 <li>
                   <NavLink to="/">Home</NavLink>
                 </li>
@@ -32,7 +32,7 @@ class App extends Component {
                   ""
                 )}
               </ul>
-              <ul className="nav navbar-nav navbar-right">
+              <ul>
                 {isAuthenticated() ? (
                   <li onClick={this.logOut}>
                     <a href="/">Log out</a>{" "}
@@ -55,4 +55,3 @@ class App extends Component {
 }
 
 export default App;
-

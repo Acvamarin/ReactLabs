@@ -10,7 +10,7 @@ export function login(data) {
 
       return response.data;
     })
-    .catch(err => Promise.reject("Authentication Failed!"));
+    .catch(err => Promise.reject("Failed!"));
 }
 
 export function isAuthenticated() {

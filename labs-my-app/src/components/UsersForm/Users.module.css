@@ -59,7 +59,7 @@ tr {
     color: #fff;
     outline: none;
     border: 2px solid #F64C2B;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, .1em .1em .2em #800;
     background: linear-gradient(#FB9575, #F45A38 48%, #EA1502 52%, Cyan);
 }
@@ -75,13 +75,12 @@ tr {
     background-blend-mode: hard-light,
         multiply,
         normal;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 50px;
+    border-radius: 50px;
 }
 
 .item textarea {
     width: 150px;
-    height: 50px;
+    height: 30px;
 
     border-radius: 10px;
 }
@@ -92,7 +91,7 @@ tr {
         multiply,
         normal;
 
-    border-bottom-right-radius: 10px;
+    border-radius: 20px;
 }
 
 
